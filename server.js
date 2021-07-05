@@ -4,13 +4,17 @@
 const express = require('express'); // npm i express
 require('dotenv').config(); // npm i dotenv
 
+// CORS: Cross Origin Resource Sharing
+// to give the permission for who can send me request 
+const cors = require('cors'); // npm i cors
+
 const pokeData = require('./assets/poke.json')
 
 
 // server has all of the properities and method of express
 const server = express();
-
 const PORT = process.env.PORT;
+server.use(cors()); // make it open to any client
 
 
 // localhost:3001/
