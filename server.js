@@ -2,6 +2,7 @@
 
 // create a variable to use express library
 const express = require('express'); // npm i express
+require('dotenv').config(); // npm i dotenv
 
 const pokeData = require('./assets/poke.json')
 
@@ -9,7 +10,7 @@ const pokeData = require('./assets/poke.json')
 // server has all of the properities and method of express
 const server = express();
 
-const PORT = 3001;
+const PORT = process.env.PORT;
 
 
 // localhost:3001/
